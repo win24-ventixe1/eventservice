@@ -1,5 +1,9 @@
-﻿namespace Presentation.Services;
+﻿using Presentation.Models;
 
-public interface IEventService
+namespace Presentation.Services
 {
+    public interface IEventService
+    {
+        IEnumerable<EventModel> GetEvents();
+    }
 }

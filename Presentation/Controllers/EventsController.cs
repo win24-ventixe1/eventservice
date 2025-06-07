@@ -5,7 +5,6 @@ namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-
 public class EventsController : ControllerBase
 {
     private readonly IEventService _eventService;
@@ -13,5 +12,12 @@ public class EventsController : ControllerBase
     public EventsController(IEventService eventService)
     {
         _eventService = eventService;
+    }
+
+    [HttpGet]
+    public IActionResult GetEvents()
+    {
+        var events = _eventService.GetEvents();
+        return Ok(events);
     }
 }
