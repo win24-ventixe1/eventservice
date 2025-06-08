@@ -6,6 +6,7 @@ namespace Presentation.Services
     {
         public IEnumerable<EventModel> GetEvents()
         {
+            // Tagit hjälp av ChatGpt att komma på Title och Description på Eventen.
             return new List<EventModel>
             {
                 new EventModel
